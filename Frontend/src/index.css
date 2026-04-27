@@ -1,0 +1,261 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────
+   FONTS — Syne (display) + JetBrains Mono (code/data)
+   ───────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* ─────────────────────────────────────────────
+   CSS VARIABLES
+   ───────────────────────────────────────────── */
+:root {
+  --bg-base:       #080b10;
+  --bg-surface:    #0d1117;
+  --bg-elevated:   #111620;
+  --bg-card:       #151c24;
+  --bg-border:     #1e2736;
+  --bg-hover:      #1a2235;
+
+  --accent-green:  #00ff88;
+  --accent-cyan:   #00d4ff;
+  --accent-purple: #7c3aed;
+  --accent-red:    #ff4444;
+  --accent-yellow: #f5a623;
+
+  --text-primary:  #e8edf5;
+  --text-secondary:#8b95a8;
+  --text-muted:    #4a5568;
+  --text-code:     #00ff88;
+
+  --glow-green:    0 0 20px rgba(0,255,136,0.3);
+  --glow-cyan:     0 0 20px rgba(0,212,255,0.3);
+  --glow-purple:   0 0 20px rgba(124,58,237,0.3);
+  --glow-red:      0 0 20px rgba(255,68,68,0.35);
+}
+
+/* ─────────────────────────────────────────────
+   BASE RESET
+   ───────────────────────────────────────────── */
+html, body, #root {
+  height: 100%;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─────────────────────────────────────────────
+   GLOBAL GRID TEXTURE — subtle dot grid
+   ───────────────────────────────────────────── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─────────────────────────────────────────────
+   TYPOGRAPHY
+   ───────────────────────────────────────────── */
+.font-display  { font-family: 'Syne', sans-serif; }
+.font-mono     { font-family: 'JetBrains Mono', monospace; }
+.font-body     { font-family: 'DM Sans', sans-serif; }
+
+/* ─────────────────────────────────────────────
+   SCROLLBAR
+   ───────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 6px; }
+::-webkit-scrollbar-track  { background: var(--bg-base); }
+::-webkit-scrollbar-thumb  { background: var(--bg-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #2a3548; }
+
+/* ─────────────────────────────────────────────
+   REUSABLE COMPONENT CLASSES
+   ───────────────────────────────────────────── */
+
+/* Glowing border card */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--bg-border);
+  border-radius: 12px;
+  position: relative;
+}
+
+/* Terminal-style tag */
+.tag-green {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: rgba(0,255,136,0.06);
+  border: 1px solid rgba(0,255,136,0.2);
+  border-radius: 999px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--accent-green);
+  letter-spacing: 0.08em;
+}
+
+/* Animated scanning line */
+@keyframes scan-line {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateY(400%); opacity: 0; }
+}
+
+.scan-animate::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-green), transparent);
+  animation: scan-line 2.4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Risk score bar fill animation */
+@keyframes fill-bar {
+  from { width: 0%; }
+}
+
+/* Pulsing threat dot */
+@keyframes threat-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,68,68,0.4); }
+  50%       { box-shadow: 0 0 0 8px rgba(255,68,68,0); }
+}
+.threat-pulse { animation: threat-pulse 1.8s infinite; }
+
+/* Glowing green dot for safe */
+@keyframes safe-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0,255,136,0.4); }
+  50%       { box-shadow: 0 0 0 8px rgba(0,255,136,0); }
+}
+.safe-pulse { animation: safe-pulse 2s infinite; }
+
+/* Terminal cursor blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+.cursor-blink::after {
+  content: '|';
+  color: var(--accent-green);
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+}
+
+/* Noise overlay for depth */
+.noise-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 0;
+}
+
+/* Hex grid decoration */
+.hex-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L55 20 L55 45 L30 60 L5 45 L5 20 Z' fill='none' stroke='rgba(0,255,136,0.04)' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
+}
+
+/* Status badge variants */
+.badge-safe       { background: rgba(0,255,136,0.08); color: #00ff88; border: 1px solid rgba(0,255,136,0.25); }
+.badge-suspicious { background: rgba(245,166,35,0.08); color: #f5a623; border: 1px solid rgba(245,166,35,0.25); }
+.badge-phishing   { background: rgba(255,68,68,0.08);  color: #ff4444; border: 1px solid rgba(255,68,68,0.25); }
+
+/* ─────────────────────────────────────────────
+   GLOW UTILITIES
+   ───────────────────────────────────────────── */
+.glow-green  { box-shadow: var(--glow-green); }
+.glow-cyan   { box-shadow: var(--glow-cyan); }
+.glow-purple { box-shadow: var(--glow-purple); }
+.glow-red    { box-shadow: var(--glow-red); }
+
+.text-glow-green { text-shadow: 0 0 12px rgba(0,255,136,0.6); }
+.text-glow-cyan  { text-shadow: 0 0 12px rgba(0,212,255,0.6); }
+
+/* ─────────────────────────────────────────────
+   INPUT FOCUS RING — security terminal style
+   ───────────────────────────────────────────── */
+.input-terminal {
+  background: var(--bg-elevated);
+  border: 1px solid var(--bg-border);
+  color: var(--text-primary);
+  font-family: 'DM Sans', sans-serif;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.input-terminal:focus {
+  outline: none;
+  border-color: rgba(0,255,136,0.4);
+  box-shadow: 0 0 0 3px rgba(0,255,136,0.08), 0 0 20px rgba(0,255,136,0.1);
+}
+.input-terminal::placeholder { color: var(--text-muted); }
+
+/* ─────────────────────────────────────────────
+   BUTTON VARIANTS
+   ───────────────────────────────────────────── */
+.btn-primary {
+  background: var(--accent-green);
+  color: #080b10;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.btn-primary:hover {
+  background: #00e87a;
+  box-shadow: 0 0 24px rgba(0,255,136,0.4);
+  transform: translateY(-1px);
+}
+.btn-primary:disabled {
+  background: var(--bg-border);
+  color: var(--text-muted);
+  box-shadow: none;
+  transform: none;
+  cursor: not-allowed;
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--bg-border);
+  color: var(--text-secondary);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.btn-ghost:hover {
+  border-color: rgba(0,255,136,0.3);
+  color: var(--text-primary);
+  background: rgba(0,255,136,0.04);
+}
+
+/* ─────────────────────────────────────────────
+   TABLE STYLES
+   ───────────────────────────────────────────── */
+.data-table th {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--bg-border);
+  background: rgba(0,0,0,0.2);
+}
+.data-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(30,39,54,0.6);
+  vertical-align: middle;
+}
+.data-table tr:hover td { background: rgba(0,255,136,0.02); }
+.data-table tr:last-child td { border-bottom: none; }

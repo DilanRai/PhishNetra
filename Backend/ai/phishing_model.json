@@ -1,0 +1,2730 @@
+{
+  "neurons": [
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 0,
+      "old": 0,
+      "activation": 0.7,
+      "bias": 0,
+      "layer": "input",
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 0,
+      "old": 0,
+      "activation": 0,
+      "bias": 0,
+      "layer": "input",
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 0,
+      "old": 0,
+      "activation": 0,
+      "bias": 0,
+      "layer": "input",
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 0,
+      "old": 0,
+      "activation": 0,
+      "bias": 0,
+      "layer": "input",
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 0,
+      "old": 0,
+      "activation": 0.8,
+      "bias": 0,
+      "layer": "input",
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 0,
+      "old": 0,
+      "activation": 0.7,
+      "bias": 0,
+      "layer": "input",
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 0,
+      "old": 0,
+      "activation": 0.5,
+      "bias": 0,
+      "layer": "input",
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 0,
+      "old": 0,
+      "activation": 0,
+      "bias": 0,
+      "layer": "input",
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 0,
+      "old": 0,
+      "activation": 0,
+      "bias": 0,
+      "layer": "input",
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 0,
+      "old": 0,
+      "activation": 0,
+      "bias": 0,
+      "layer": "input",
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 0,
+      "old": 0,
+      "activation": 1,
+      "bias": 0,
+      "layer": "input",
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 0,
+      "old": 0,
+      "activation": 1,
+      "bias": 0,
+      "layer": "input",
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 0,
+      "old": 0,
+      "activation": 0,
+      "bias": 0,
+      "layer": "input",
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 0,
+      "old": 0,
+      "activation": 0,
+      "bias": 0,
+      "layer": "input",
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 0,
+      "old": 0,
+      "activation": 0,
+      "bias": 0,
+      "layer": "input",
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 0,
+      "old": 0,
+      "activation": 0,
+      "bias": 0,
+      "layer": "input",
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 0,
+      "old": 0,
+      "activation": 0,
+      "bias": 0,
+      "layer": "input",
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 0,
+      "old": 0,
+      "activation": 1,
+      "bias": 0,
+      "layer": "input",
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 0.6094258191423374,
+      "old": -0.2661677882251581,
+      "activation": 0.6478098125413423,
+      "bias": -0.03383518682214311,
+      "layer": 0,
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 1.1377692944826332,
+      "old": -0.22054005321478845,
+      "activation": 0.7572698434021323,
+      "bias": 0.007546113419429642,
+      "layer": 0,
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 0.038902716157402165,
+      "old": -0.14162527752931722,
+      "activation": 0.509724452637452,
+      "bias": 0.007863816630721328,
+      "layer": 0,
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 1.0638441900106703,
+      "old": -0.2465313404370982,
+      "activation": 0.7434244893722664,
+      "bias": 0.0017674423748309008,
+      "layer": 0,
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 1.441753515537916,
+      "old": -0.6440525011997423,
+      "activation": 0.808726046502017,
+      "bias": -0.312586554413956,
+      "layer": 0,
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": -1.3367085315206275,
+      "old": 0.5145659313925653,
+      "activation": 0.2080518604620574,
+      "bias": 0.43028567365989656,
+      "layer": 0,
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 1.3058126647492454,
+      "old": -0.5345675941618085,
+      "activation": 0.7868116196061857,
+      "bias": -0.11605622292654522,
+      "layer": 0,
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": -1.2656494701888497,
+      "old": 0.5389294295191376,
+      "activation": 0.22000290059296845,
+      "bias": 0.39333195993063036,
+      "layer": 0,
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": -0.16745124952850204,
+      "old": 0.021714882407794317,
+      "activation": 0.45823473327231773,
+      "bias": 0.017595126650209326,
+      "layer": 0,
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 1.597222187145911,
+      "old": -0.7308571687125504,
+      "activation": 0.8316297893299747,
+      "bias": -0.2976520184066548,
+      "layer": 0,
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": -0.8984736418999862,
+      "old": 0.24544410924320387,
+      "activation": 0.2893642654011814,
+      "bias": 0.14488617807756643,
+      "layer": 0,
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 0.999051945809742,
+      "old": -0.07536850388816824,
+      "activation": 0.7308721390360833,
+      "bias": 0.047577618434441714,
+      "layer": 0,
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": -0.2003533757170721,
+      "old": -0.2280203026651743,
+      "activation": 0.45007853788232915,
+      "bias": -0.021695442433283977,
+      "layer": 0,
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 1.0449579831745397,
+      "old": -0.19372070561351354,
+      "activation": 0.7398055187932402,
+      "bias": -0.09117173266519084,
+      "layer": 0,
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 1.202285322168085,
+      "old": 0.7739853283147304,
+      "activation": 0.7689310801007123,
+      "bias": 0.2569364041759392,
+      "layer": 1,
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 1.137294820043705,
+      "old": 0.6895693194110725,
+      "activation": 0.7571826185528143,
+      "bias": 0.18404020647040903,
+      "layer": 1,
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 1.0671516606775442,
+      "old": -1.0930494264844501,
+      "activation": 0.7440548631695277,
+      "bias": -0.2857868977112923,
+      "layer": 1,
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 1.5861521474721045,
+      "old": 1.4191476630436104,
+      "activation": 0.830074048266825,
+      "bias": 0.36103345783385876,
+      "layer": 1,
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 1.127281832567848,
+      "old": -1.1019221554706036,
+      "activation": 0.7553369221515257,
+      "bias": -0.4046084718321365,
+      "layer": 1,
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": -0.8102474576683145,
+      "old": 1.180273571483205,
+      "activation": 0.30783776647605604,
+      "bias": 0.422029821550874,
+      "layer": 1,
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 1.5785293796942184,
+      "old": -1.078789278205238,
+      "activation": 0.8289961414359556,
+      "bias": -0.3114645833890301,
+      "layer": 1,
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 1.3781362818226857,
+      "old": -1.0972178682582008,
+      "activation": 0.7986915121452555,
+      "bias": -0.3131483285052411,
+      "layer": 1,
+      "squash": "LOGISTIC"
+    },
+    {
+      "trace": {
+        "elegibility": {},
+        "extended": {}
+      },
+      "state": 2.126599116806423,
+      "old": -3.1422327688300666,
+      "activation": 0.8934617183880187,
+      "bias": -2.2616977359834727,
+      "layer": "output",
+      "squash": "LOGISTIC"
+    }
+  ],
+  "connections": [
+    {
+      "from": 0,
+      "to": 18,
+      "weight": 0.13179752284155535,
+      "gater": null
+    },
+    {
+      "from": 0,
+      "to": 19,
+      "weight": 0.1521650742148508,
+      "gater": null
+    },
+    {
+      "from": 0,
+      "to": 20,
+      "weight": -0.010762602885626006,
+      "gater": null
+    },
+    {
+      "from": 0,
+      "to": 21,
+      "weight": 0.220061715703098,
+      "gater": null
+    },
+    {
+      "from": 0,
+      "to": 22,
+      "weight": 0.5544370586691101,
+      "gater": null
+    },
+    {
+      "from": 0,
+      "to": 23,
+      "weight": -0.6914678252257713,
+      "gater": null
+    },
+    {
+      "from": 0,
+      "to": 24,
+      "weight": 0.4214067792465031,
+      "gater": null
+    },
+    {
+      "from": 0,
+      "to": 25,
+      "weight": -0.6311984531155129,
+      "gater": null
+    },
+    {
+      "from": 0,
+      "to": 26,
+      "weight": -0.08239704078673882,
+      "gater": null
+    },
+    {
+      "from": 0,
+      "to": 27,
+      "weight": 0.6243879639684445,
+      "gater": null
+    },
+    {
+      "from": 0,
+      "to": 28,
+      "weight": -0.1961517452505541,
+      "gater": null
+    },
+    {
+      "from": 0,
+      "to": 29,
+      "weight": 0.2703706569409022,
+      "gater": null
+    },
+    {
+      "from": 0,
+      "to": 30,
+      "weight": -0.1242594642707101,
+      "gater": null
+    },
+    {
+      "from": 0,
+      "to": 31,
+      "weight": 0.35700223022625416,
+      "gater": null
+    },
+    {
+      "from": 1,
+      "to": 18,
+      "weight": 0.022654272319092467,
+      "gater": null
+    },
+    {
+      "from": 1,
+      "to": 19,
+      "weight": 0.11761386252793302,
+      "gater": null
+    },
+    {
+      "from": 1,
+      "to": 20,
+      "weight": 0.0933503535636784,
+      "gater": null
+    },
+    {
+      "from": 1,
+      "to": 21,
+      "weight": 0.05867551553920729,
+      "gater": null
+    },
+    {
+      "from": 1,
+      "to": 22,
+      "weight": 0.07029719081473637,
+      "gater": null
+    },
+    {
+      "from": 1,
+      "to": 23,
+      "weight": -0.14304847143634836,
+      "gater": null
+    },
+    {
+      "from": 1,
+      "to": 24,
+      "weight": 0.013342037294679683,
+      "gater": null
+    },
+    {
+      "from": 1,
+      "to": 25,
+      "weight": -0.22505375520080595,
+      "gater": null
+    },
+    {
+      "from": 1,
+      "to": 26,
+      "weight": -0.03207601388718072,
+      "gater": null
+    },
+    {
+      "from": 1,
+      "to": 27,
+      "weight": 0.03545658260496072,
+      "gater": null
+    },
+    {
+      "from": 1,
+      "to": 28,
+      "weight": -0.1047075375180691,
+      "gater": null
+    },
+    {
+      "from": 1,
+      "to": 29,
+      "weight": 0.09924202193127778,
+      "gater": null
+    },
+    {
+      "from": 1,
+      "to": 30,
+      "weight": -0.0293769260892744,
+      "gater": null
+    },
+    {
+      "from": 1,
+      "to": 31,
+      "weight": -0.050727399148924046,
+      "gater": null
+    },
+    {
+      "from": 2,
+      "to": 18,
+      "weight": -0.13542336575890235,
+      "gater": null
+    },
+    {
+      "from": 2,
+      "to": 19,
+      "weight": -0.20137290996942825,
+      "gater": null
+    },
+    {
+      "from": 2,
+      "to": 20,
+      "weight": -0.13706857121336638,
+      "gater": null
+    },
+    {
+      "from": 2,
+      "to": 21,
+      "weight": -0.11379432506134121,
+      "gater": null
+    },
+    {
+      "from": 2,
+      "to": 22,
+      "weight": -0.2077435508507483,
+      "gater": null
+    },
+    {
+      "from": 2,
+      "to": 23,
+      "weight": 0.021439596932149852,
+      "gater": null
+    },
+    {
+      "from": 2,
+      "to": 24,
+      "weight": -0.23373430402590514,
+      "gater": null
+    },
+    {
+      "from": 2,
+      "to": 25,
+      "weight": 0.07276372257130236,
+      "gater": null
+    },
+    {
+      "from": 2,
+      "to": 26,
+      "weight": -0.12881833381819005,
+      "gater": null
+    },
+    {
+      "from": 2,
+      "to": 27,
+      "weight": -0.25488390818676726,
+      "gater": null
+    },
+    {
+      "from": 2,
+      "to": 28,
+      "weight": -0.08491443278417,
+      "gater": null
+    },
+    {
+      "from": 2,
+      "to": 29,
+      "weight": -0.03350754692102652,
+      "gater": null
+    },
+    {
+      "from": 2,
+      "to": 30,
+      "weight": -0.18195434618922357,
+      "gater": null
+    },
+    {
+      "from": 2,
+      "to": 31,
+      "weight": -0.07395963637357868,
+      "gater": null
+    },
+    {
+      "from": 3,
+      "to": 18,
+      "weight": 0.12953858746994074,
+      "gater": null
+    },
+    {
+      "from": 3,
+      "to": 19,
+      "weight": -0.04818940745542528,
+      "gater": null
+    },
+    {
+      "from": 3,
+      "to": 20,
+      "weight": 0.0829491655480538,
+      "gater": null
+    },
+    {
+      "from": 3,
+      "to": 21,
+      "weight": -0.00006332751064791082,
+      "gater": null
+    },
+    {
+      "from": 3,
+      "to": 22,
+      "weight": 0.14122074097120174,
+      "gater": null
+    },
+    {
+      "from": 3,
+      "to": 23,
+      "weight": 0.037695999779289405,
+      "gater": null
+    },
+    {
+      "from": 3,
+      "to": 24,
+      "weight": 0.07455180404519031,
+      "gater": null
+    },
+    {
+      "from": 3,
+      "to": 25,
+      "weight": -0.031121158689593694,
+      "gater": null
+    },
+    {
+      "from": 3,
+      "to": 26,
+      "weight": 0.019442743916652468,
+      "gater": null
+    },
+    {
+      "from": 3,
+      "to": 27,
+      "weight": 0.0987508765690494,
+      "gater": null
+    },
+    {
+      "from": 3,
+      "to": 28,
+      "weight": 0.04977991358081302,
+      "gater": null
+    },
+    {
+      "from": 3,
+      "to": 29,
+      "weight": 0.10828893823890998,
+      "gater": null
+    },
+    {
+      "from": 3,
+      "to": 30,
+      "weight": 0.08618452947249193,
+      "gater": null
+    },
+    {
+      "from": 3,
+      "to": 31,
+      "weight": 0.0395992726968513,
+      "gater": null
+    },
+    {
+      "from": 4,
+      "to": 18,
+      "weight": 0.35453359819661984,
+      "gater": null
+    },
+    {
+      "from": 4,
+      "to": 19,
+      "weight": 0.34428814284924436,
+      "gater": null
+    },
+    {
+      "from": 4,
+      "to": 20,
+      "weight": -0.021964330884449094,
+      "gater": null
+    },
+    {
+      "from": 4,
+      "to": 21,
+      "weight": 0.31965318740586235,
+      "gater": null
+    },
+    {
+      "from": 4,
+      "to": 22,
+      "weight": 0.7866027082062859,
+      "gater": null
+    },
+    {
+      "from": 4,
+      "to": 23,
+      "weight": -1.2507757139465314,
+      "gater": null
+    },
+    {
+      "from": 4,
+      "to": 24,
+      "weight": 0.610184527279094,
+      "gater": null
+    },
+    {
+      "from": 4,
+      "to": 25,
+      "weight": -1.1647359492905804,
+      "gater": null
+    },
+    {
+      "from": 4,
+      "to": 26,
+      "weight": -0.15069207742503657,
+      "gater": null
+    },
+    {
+      "from": 4,
+      "to": 27,
+      "weight": 0.9846678994686207,
+      "gater": null
+    },
+    {
+      "from": 4,
+      "to": 28,
+      "weight": -0.5654503052189741,
+      "gater": null
+    },
+    {
+      "from": 4,
+      "to": 29,
+      "weight": 0.3036510169802803,
+      "gater": null
+    },
+    {
+      "from": 4,
+      "to": 30,
+      "weight": -0.21612781548890797,
+      "gater": null
+    },
+    {
+      "from": 4,
+      "to": 31,
+      "weight": 0.35856632529694554,
+      "gater": null
+    },
+    {
+      "from": 5,
+      "to": 18,
+      "weight": 0.1689690750412777,
+      "gater": null
+    },
+    {
+      "from": 5,
+      "to": 19,
+      "weight": 0.2795867105255204,
+      "gater": null
+    },
+    {
+      "from": 5,
+      "to": 20,
+      "weight": 0.019598286300254005,
+      "gater": null
+    },
+    {
+      "from": 5,
+      "to": 21,
+      "weight": 0.1548511069716392,
+      "gater": null
+    },
+    {
+      "from": 5,
+      "to": 22,
+      "weight": 0.42265394588268457,
+      "gater": null
+    },
+    {
+      "from": 5,
+      "to": 23,
+      "weight": -0.5278967150311885,
+      "gater": null
+    },
+    {
+      "from": 5,
+      "to": 24,
+      "weight": 0.3600203810545376,
+      "gater": null
+    },
+    {
+      "from": 5,
+      "to": 25,
+      "weight": -0.3881654733555777,
+      "gater": null
+    },
+    {
+      "from": 5,
+      "to": 26,
+      "weight": -0.089302714493548,
+      "gater": null
+    },
+    {
+      "from": 5,
+      "to": 27,
+      "weight": 0.4349420920036703,
+      "gater": null
+    },
+    {
+      "from": 5,
+      "to": 28,
+      "weight": -0.2910118475798936,
+      "gater": null
+    },
+    {
+      "from": 5,
+      "to": 29,
+      "weight": 0.09120651283436869,
+      "gater": null
+    },
+    {
+      "from": 5,
+      "to": 30,
+      "weight": -0.012367000477586047,
+      "gater": null
+    },
+    {
+      "from": 5,
+      "to": 31,
+      "weight": 0.12360560034521448,
+      "gater": null
+    },
+    {
+      "from": 6,
+      "to": 18,
+      "weight": 0.09974793880528787,
+      "gater": null
+    },
+    {
+      "from": 6,
+      "to": 19,
+      "weight": 0.1544866908641328,
+      "gater": null
+    },
+    {
+      "from": 6,
+      "to": 20,
+      "weight": 0.05242060674525071,
+      "gater": null
+    },
+    {
+      "from": 6,
+      "to": 21,
+      "weight": 0.22806241164571697,
+      "gater": null
+    },
+    {
+      "from": 6,
+      "to": 22,
+      "weight": 0.5594574226741169,
+      "gater": null
+    },
+    {
+      "from": 6,
+      "to": 23,
+      "weight": -0.7218417258269886,
+      "gater": null
+    },
+    {
+      "from": 6,
+      "to": 24,
+      "weight": 0.4351528569317972,
+      "gater": null
+    },
+    {
+      "from": 6,
+      "to": 25,
+      "weight": -0.5191863712361445,
+      "gater": null
+    },
+    {
+      "from": 6,
+      "to": 26,
+      "weight": -0.10881057175102113,
+      "gater": null
+    },
+    {
+      "from": 6,
+      "to": 27,
+      "weight": 0.6274687630017579,
+      "gater": null
+    },
+    {
+      "from": 6,
+      "to": 28,
+      "weight": -0.3782156183666598,
+      "gater": null
+    },
+    {
+      "from": 6,
+      "to": 29,
+      "weight": 0.1125127671150752,
+      "gater": null
+    },
+    {
+      "from": 6,
+      "to": 30,
+      "weight": -0.005859394586510805,
+      "gater": null
+    },
+    {
+      "from": 6,
+      "to": 31,
+      "weight": 0.3182714244909398,
+      "gater": null
+    },
+    {
+      "from": 7,
+      "to": 18,
+      "weight": 0.12690549339309143,
+      "gater": null
+    },
+    {
+      "from": 7,
+      "to": 19,
+      "weight": 0.08366834272810279,
+      "gater": null
+    },
+    {
+      "from": 7,
+      "to": 20,
+      "weight": 0.038593238060918765,
+      "gater": null
+    },
+    {
+      "from": 7,
+      "to": 21,
+      "weight": 0.2215067118280707,
+      "gater": null
+    },
+    {
+      "from": 7,
+      "to": 22,
+      "weight": 0.3472517996243857,
+      "gater": null
+    },
+    {
+      "from": 7,
+      "to": 23,
+      "weight": -0.6311797549282954,
+      "gater": null
+    },
+    {
+      "from": 7,
+      "to": 24,
+      "weight": 0.3371005387883283,
+      "gater": null
+    },
+    {
+      "from": 7,
+      "to": 25,
+      "weight": -0.645729598654218,
+      "gater": null
+    },
+    {
+      "from": 7,
+      "to": 26,
+      "weight": -0.04120906048312251,
+      "gater": null
+    },
+    {
+      "from": 7,
+      "to": 27,
+      "weight": 0.4948009408119524,
+      "gater": null
+    },
+    {
+      "from": 7,
+      "to": 28,
+      "weight": -0.22956444192403233,
+      "gater": null
+    },
+    {
+      "from": 7,
+      "to": 29,
+      "weight": 0.1853447668029911,
+      "gater": null
+    },
+    {
+      "from": 7,
+      "to": 30,
+      "weight": -0.09589840124799714,
+      "gater": null
+    },
+    {
+      "from": 7,
+      "to": 31,
+      "weight": 0.21762871173735573,
+      "gater": null
+    },
+    {
+      "from": 8,
+      "to": 18,
+      "weight": 0.1329816960679236,
+      "gater": null
+    },
+    {
+      "from": 8,
+      "to": 19,
+      "weight": 0.16576660346628957,
+      "gater": null
+    },
+    {
+      "from": 8,
+      "to": 20,
+      "weight": 0.07395833937766193,
+      "gater": null
+    },
+    {
+      "from": 8,
+      "to": 21,
+      "weight": 0.12646741727327163,
+      "gater": null
+    },
+    {
+      "from": 8,
+      "to": 22,
+      "weight": 0.4532328547072705,
+      "gater": null
+    },
+    {
+      "from": 8,
+      "to": 23,
+      "weight": -0.6473525905117034,
+      "gater": null
+    },
+    {
+      "from": 8,
+      "to": 24,
+      "weight": 0.32626266731650877,
+      "gater": null
+    },
+    {
+      "from": 8,
+      "to": 25,
+      "weight": -0.603034337539422,
+      "gater": null
+    },
+    {
+      "from": 8,
+      "to": 26,
+      "weight": -0.08760389297863647,
+      "gater": null
+    },
+    {
+      "from": 8,
+      "to": 27,
+      "weight": 0.5350107327961865,
+      "gater": null
+    },
+    {
+      "from": 8,
+      "to": 28,
+      "weight": -0.29946776174243694,
+      "gater": null
+    },
+    {
+      "from": 8,
+      "to": 29,
+      "weight": 0.05261281439190196,
+      "gater": null
+    },
+    {
+      "from": 8,
+      "to": 30,
+      "weight": -0.09059447994002624,
+      "gater": null
+    },
+    {
+      "from": 8,
+      "to": 31,
+      "weight": 0.14117425285325003,
+      "gater": null
+    },
+    {
+      "from": 9,
+      "to": 18,
+      "weight": 0.14685559601095954,
+      "gater": null
+    },
+    {
+      "from": 9,
+      "to": 19,
+      "weight": 0.19742863152659407,
+      "gater": null
+    },
+    {
+      "from": 9,
+      "to": 20,
+      "weight": -0.1155401653095054,
+      "gater": null
+    },
+    {
+      "from": 9,
+      "to": 21,
+      "weight": 0.2519083237042808,
+      "gater": null
+    },
+    {
+      "from": 9,
+      "to": 22,
+      "weight": 0.4141326519176495,
+      "gater": null
+    },
+    {
+      "from": 9,
+      "to": 23,
+      "weight": -0.6600525416302259,
+      "gater": null
+    },
+    {
+      "from": 9,
+      "to": 24,
+      "weight": 0.399603308143689,
+      "gater": null
+    },
+    {
+      "from": 9,
+      "to": 25,
+      "weight": -0.5163578893263572,
+      "gater": null
+    },
+    {
+      "from": 9,
+      "to": 26,
+      "weight": -0.024168090080760138,
+      "gater": null
+    },
+    {
+      "from": 9,
+      "to": 27,
+      "weight": 0.5157588437543486,
+      "gater": null
+    },
+    {
+      "from": 9,
+      "to": 28,
+      "weight": -0.22584058656755113,
+      "gater": null
+    },
+    {
+      "from": 9,
+      "to": 29,
+      "weight": 0.06276599256782066,
+      "gater": null
+    },
+    {
+      "from": 9,
+      "to": 30,
+      "weight": -0.11548696530060734,
+      "gater": null
+    },
+    {
+      "from": 9,
+      "to": 31,
+      "weight": 0.13370484944889663,
+      "gater": null
+    },
+    {
+      "from": 10,
+      "to": 18,
+      "weight": 0.036600114533408765,
+      "gater": null
+    },
+    {
+      "from": 10,
+      "to": 19,
+      "weight": 0.2294467345154531,
+      "gater": null
+    },
+    {
+      "from": 10,
+      "to": 20,
+      "weight": 0.04317248865193999,
+      "gater": null
+    },
+    {
+      "from": 10,
+      "to": 21,
+      "weight": 0.20067495328488252,
+      "gater": null
+    },
+    {
+      "from": 10,
+      "to": 22,
+      "weight": 0.14935070053920102,
+      "gater": null
+    },
+    {
+      "from": 10,
+      "to": 23,
+      "weight": 0.10736647985493544,
+      "gater": null
+    },
+    {
+      "from": 10,
+      "to": 24,
+      "weight": 0.11690397702861967,
+      "gater": null
+    },
+    {
+      "from": 10,
+      "to": 25,
+      "weight": 0.06257461425079505,
+      "gater": null
+    },
+    {
+      "from": 10,
+      "to": 26,
+      "weight": 0.043987491836734005,
+      "gater": null
+    },
+    {
+      "from": 10,
+      "to": 27,
+      "weight": 0.251651509695325,
+      "gater": null
+    },
+    {
+      "from": 10,
+      "to": 28,
+      "weight": -0.02937812520890046,
+      "gater": null
+    },
+    {
+      "from": 10,
+      "to": 29,
+      "weight": 0.20999600944828267,
+      "gater": null
+    },
+    {
+      "from": 10,
+      "to": 30,
+      "weight": 0.008710133577940442,
+      "gater": null
+    },
+    {
+      "from": 10,
+      "to": 31,
+      "weight": 0.16604301910517424,
+      "gater": null
+    },
+    {
+      "from": 11,
+      "to": 18,
+      "weight": 0.016393947906855427,
+      "gater": null
+    },
+    {
+      "from": 11,
+      "to": 19,
+      "weight": 0.19033503239490446,
+      "gater": null
+    },
+    {
+      "from": 11,
+      "to": 20,
+      "weight": 0.03669985622270964,
+      "gater": null
+    },
+    {
+      "from": 11,
+      "to": 21,
+      "weight": 0.1412107054004314,
+      "gater": null
+    },
+    {
+      "from": 11,
+      "to": 22,
+      "weight": 0.09559559786495263,
+      "gater": null
+    },
+    {
+      "from": 11,
+      "to": 23,
+      "weight": -0.017384613121001674,
+      "gater": null
+    },
+    {
+      "from": 11,
+      "to": 24,
+      "weight": 0.10692049630359991,
+      "gater": null
+    },
+    {
+      "from": 11,
+      "to": 25,
+      "weight": -0.054960949097479624,
+      "gater": null
+    },
+    {
+      "from": 11,
+      "to": 26,
+      "weight": -0.007896322116638913,
+      "gater": null
+    },
+    {
+      "from": 11,
+      "to": 27,
+      "weight": 0.08375336522735412,
+      "gater": null
+    },
+    {
+      "from": 11,
+      "to": 28,
+      "weight": -0.02949773067090436,
+      "gater": null
+    },
+    {
+      "from": 11,
+      "to": 29,
+      "weight": 0.18066072352023976,
+      "gater": null
+    },
+    {
+      "from": 11,
+      "to": 30,
+      "weight": 0.04478543578162834,
+      "gater": null
+    },
+    {
+      "from": 11,
+      "to": 31,
+      "weight": 0.22645855254969724,
+      "gater": null
+    },
+    {
+      "from": 12,
+      "to": 18,
+      "weight": 0.1088976683655984,
+      "gater": null
+    },
+    {
+      "from": 12,
+      "to": 19,
+      "weight": 0.05995196801161091,
+      "gater": null
+    },
+    {
+      "from": 12,
+      "to": 20,
+      "weight": -0.06387825216064105,
+      "gater": null
+    },
+    {
+      "from": 12,
+      "to": 21,
+      "weight": -0.015094644103103825,
+      "gater": null
+    },
+    {
+      "from": 12,
+      "to": 22,
+      "weight": 0.18228599780101012,
+      "gater": null
+    },
+    {
+      "from": 12,
+      "to": 23,
+      "weight": -0.19626689315513887,
+      "gater": null
+    },
+    {
+      "from": 12,
+      "to": 24,
+      "weight": 0.11079806003577766,
+      "gater": null
+    },
+    {
+      "from": 12,
+      "to": 25,
+      "weight": -0.12391545737028549,
+      "gater": null
+    },
+    {
+      "from": 12,
+      "to": 26,
+      "weight": -0.019783225464228213,
+      "gater": null
+    },
+    {
+      "from": 12,
+      "to": 27,
+      "weight": 0.19843111630680021,
+      "gater": null
+    },
+    {
+      "from": 12,
+      "to": 28,
+      "weight": -0.1626370441231912,
+      "gater": null
+    },
+    {
+      "from": 12,
+      "to": 29,
+      "weight": 0.006321356789527403,
+      "gater": null
+    },
+    {
+      "from": 12,
+      "to": 30,
+      "weight": -0.04557625817714279,
+      "gater": null
+    },
+    {
+      "from": 12,
+      "to": 31,
+      "weight": 0.12357528266330561,
+      "gater": null
+    },
+    {
+      "from": 13,
+      "to": 18,
+      "weight": 0.15448856661855423,
+      "gater": null
+    },
+    {
+      "from": 13,
+      "to": 19,
+      "weight": 0.14546812514253551,
+      "gater": null
+    },
+    {
+      "from": 13,
+      "to": 20,
+      "weight": 0.03722288982690103,
+      "gater": null
+    },
+    {
+      "from": 13,
+      "to": 21,
+      "weight": 0.15433248144766784,
+      "gater": null
+    },
+    {
+      "from": 13,
+      "to": 22,
+      "weight": 0.34957417785969075,
+      "gater": null
+    },
+    {
+      "from": 13,
+      "to": 23,
+      "weight": -0.4230388820190155,
+      "gater": null
+    },
+    {
+      "from": 13,
+      "to": 24,
+      "weight": 0.21372665233313573,
+      "gater": null
+    },
+    {
+      "from": 13,
+      "to": 25,
+      "weight": -0.5035536478272779,
+      "gater": null
+    },
+    {
+      "from": 13,
+      "to": 26,
+      "weight": -0.07175508204961267,
+      "gater": null
+    },
+    {
+      "from": 13,
+      "to": 27,
+      "weight": 0.4040187148299103,
+      "gater": null
+    },
+    {
+      "from": 13,
+      "to": 28,
+      "weight": -0.16059724004088866,
+      "gater": null
+    },
+    {
+      "from": 13,
+      "to": 29,
+      "weight": 0.10789420078139608,
+      "gater": null
+    },
+    {
+      "from": 13,
+      "to": 30,
+      "weight": -0.1321291107962975,
+      "gater": null
+    },
+    {
+      "from": 13,
+      "to": 31,
+      "weight": 0.13178120767916243,
+      "gater": null
+    },
+    {
+      "from": 14,
+      "to": 18,
+      "weight": 0.08741934287844788,
+      "gater": null
+    },
+    {
+      "from": 14,
+      "to": 19,
+      "weight": 0.02808323919787531,
+      "gater": null
+    },
+    {
+      "from": 14,
+      "to": 20,
+      "weight": -0.05473767654426543,
+      "gater": null
+    },
+    {
+      "from": 14,
+      "to": 21,
+      "weight": 0.09744150451362427,
+      "gater": null
+    },
+    {
+      "from": 14,
+      "to": 22,
+      "weight": 0.20627972777976233,
+      "gater": null
+    },
+    {
+      "from": 14,
+      "to": 23,
+      "weight": -0.3728488191102512,
+      "gater": null
+    },
+    {
+      "from": 14,
+      "to": 24,
+      "weight": 0.2915159530899105,
+      "gater": null
+    },
+    {
+      "from": 14,
+      "to": 25,
+      "weight": -0.4331316284934683,
+      "gater": null
+    },
+    {
+      "from": 14,
+      "to": 26,
+      "weight": -0.05375297515141684,
+      "gater": null
+    },
+    {
+      "from": 14,
+      "to": 27,
+      "weight": 0.26836728695119383,
+      "gater": null
+    },
+    {
+      "from": 14,
+      "to": 28,
+      "weight": -0.06322698047077571,
+      "gater": null
+    },
+    {
+      "from": 14,
+      "to": 29,
+      "weight": 0.13456037958532385,
+      "gater": null
+    },
+    {
+      "from": 14,
+      "to": 30,
+      "weight": 0.025261215986183055,
+      "gater": null
+    },
+    {
+      "from": 14,
+      "to": 31,
+      "weight": 0.19342984821471243,
+      "gater": null
+    },
+    {
+      "from": 15,
+      "to": 18,
+      "weight": 0.027508329364269668,
+      "gater": null
+    },
+    {
+      "from": 15,
+      "to": 19,
+      "weight": 0.15803089381266752,
+      "gater": null
+    },
+    {
+      "from": 15,
+      "to": 20,
+      "weight": -0.06149847961594168,
+      "gater": null
+    },
+    {
+      "from": 15,
+      "to": 21,
+      "weight": 0.13802358401833492,
+      "gater": null
+    },
+    {
+      "from": 15,
+      "to": 22,
+      "weight": 0.1447994359521619,
+      "gater": null
+    },
+    {
+      "from": 15,
+      "to": 23,
+      "weight": -0.28087547575142174,
+      "gater": null
+    },
+    {
+      "from": 15,
+      "to": 24,
+      "weight": 0.14654536886242198,
+      "gater": null
+    },
+    {
+      "from": 15,
+      "to": 25,
+      "weight": -0.13060316774997083,
+      "gater": null
+    },
+    {
+      "from": 15,
+      "to": 26,
+      "weight": -0.07101126544243537,
+      "gater": null
+    },
+    {
+      "from": 15,
+      "to": 27,
+      "weight": 0.21867393326131385,
+      "gater": null
+    },
+    {
+      "from": 15,
+      "to": 28,
+      "weight": -0.07868923616612247,
+      "gater": null
+    },
+    {
+      "from": 15,
+      "to": 29,
+      "weight": -0.018462714791507247,
+      "gater": null
+    },
+    {
+      "from": 15,
+      "to": 30,
+      "weight": -0.06553299225621338,
+      "gater": null
+    },
+    {
+      "from": 15,
+      "to": 31,
+      "weight": 0.0853504075243606,
+      "gater": null
+    },
+    {
+      "from": 16,
+      "to": 18,
+      "weight": -0.10218113655777483,
+      "gater": null
+    },
+    {
+      "from": 16,
+      "to": 19,
+      "weight": -0.03279985963338389,
+      "gater": null
+    },
+    {
+      "from": 16,
+      "to": 20,
+      "weight": -0.011990018831247121,
+      "gater": null
+    },
+    {
+      "from": 16,
+      "to": 21,
+      "weight": -0.1433069263787118,
+      "gater": null
+    },
+    {
+      "from": 16,
+      "to": 22,
+      "weight": -0.14589987828180243,
+      "gater": null
+    },
+    {
+      "from": 16,
+      "to": 23,
+      "weight": 0.09049937380954978,
+      "gater": null
+    },
+    {
+      "from": 16,
+      "to": 24,
+      "weight": -0.20163333837921835,
+      "gater": null
+    },
+    {
+      "from": 16,
+      "to": 25,
+      "weight": 0.0980816851418253,
+      "gater": null
+    },
+    {
+      "from": 16,
+      "to": 26,
+      "weight": 0.1362339712072446,
+      "gater": null
+    },
+    {
+      "from": 16,
+      "to": 27,
+      "weight": -0.20329676067786603,
+      "gater": null
+    },
+    {
+      "from": 16,
+      "to": 28,
+      "weight": 0.1933184337598296,
+      "gater": null
+    },
+    {
+      "from": 16,
+      "to": 29,
+      "weight": -0.10025340167921952,
+      "gater": null
+    },
+    {
+      "from": 16,
+      "to": 30,
+      "weight": -0.01940013547183836,
+      "gater": null
+    },
+    {
+      "from": 16,
+      "to": 31,
+      "weight": -0.04286942578379419,
+      "gater": null
+    },
+    {
+      "from": 17,
+      "to": 18,
+      "weight": 0.0462294770462933,
+      "gater": null
+    },
+    {
+      "from": 17,
+      "to": 19,
+      "weight": 0.055541305123124246,
+      "gater": null
+    },
+    {
+      "from": 17,
+      "to": 20,
+      "weight": -0.06365726240327448,
+      "gater": null
+    },
+    {
+      "from": 17,
+      "to": 21,
+      "weight": 0.08799835733066103,
+      "gater": null
+    },
+    {
+      "from": 17,
+      "to": 22,
+      "weight": -0.08358080954062494,
+      "gater": null
+    },
+    {
+      "from": 17,
+      "to": 23,
+      "weight": 0.35812054033613316,
+      "gater": null
+    },
+    {
+      "from": 17,
+      "to": 24,
+      "weight": -0.054678648156331174,
+      "gater": null
+    },
+    {
+      "from": 17,
+      "to": 25,
+      "weight": 0.23834159830750448,
+      "gater": null
+    },
+    {
+      "from": 17,
+      "to": 26,
+      "weight": 0.07401123061293412,
+      "gater": null
+    },
+    {
+      "from": 17,
+      "to": 27,
+      "weight": -0.28353040962636905,
+      "gater": null
+    },
+    {
+      "from": 17,
+      "to": 28,
+      "weight": -0.0020013957579252395,
+      "gater": null
+    },
+    {
+      "from": 17,
+      "to": 29,
+      "weight": 0.008536378422326421,
+      "gater": null
+    },
+    {
+      "from": 17,
+      "to": 30,
+      "weight": 0.039316972364832226,
+      "gater": null
+    },
+    {
+      "from": 17,
+      "to": 31,
+      "weight": -0.03878610969819534,
+      "gater": null
+    },
+    {
+      "from": 18,
+      "to": 32,
+      "weight": 0.01620709511000992,
+      "gater": null
+    },
+    {
+      "from": 18,
+      "to": 33,
+      "weight": 0.047017528226077375,
+      "gater": null
+    },
+    {
+      "from": 18,
+      "to": 34,
+      "weight": 0.062041103462101434,
+      "gater": null
+    },
+    {
+      "from": 18,
+      "to": 35,
+      "weight": 0.181286773415449,
+      "gater": null
+    },
+    {
+      "from": 18,
+      "to": 36,
+      "weight": 0.2070307666731916,
+      "gater": null
+    },
+    {
+      "from": 18,
+      "to": 37,
+      "weight": -0.1616366707645386,
+      "gater": null
+    },
+    {
+      "from": 18,
+      "to": 38,
+      "weight": 0.15807616602865335,
+      "gater": null
+    },
+    {
+      "from": 18,
+      "to": 39,
+      "weight": 0.23774975572357326,
+      "gater": null
+    },
+    {
+      "from": 19,
+      "to": 32,
+      "weight": 0.1584283249316565,
+      "gater": null
+    },
+    {
+      "from": 19,
+      "to": 33,
+      "weight": 0.08514220601737307,
+      "gater": null
+    },
+    {
+      "from": 19,
+      "to": 34,
+      "weight": 0.23322431399008114,
+      "gater": null
+    },
+    {
+      "from": 19,
+      "to": 35,
+      "weight": 0.10763243862637216,
+      "gater": null
+    },
+    {
+      "from": 19,
+      "to": 36,
+      "weight": 0.186610866829621,
+      "gater": null
+    },
+    {
+      "from": 19,
+      "to": 37,
+      "weight": -0.2426432102011741,
+      "gater": null
+    },
+    {
+      "from": 19,
+      "to": 38,
+      "weight": 0.22553109550491307,
+      "gater": null
+    },
+    {
+      "from": 19,
+      "to": 39,
+      "weight": 0.1822246818106583,
+      "gater": null
+    },
+    {
+      "from": 20,
+      "to": 32,
+      "weight": 0.07843893074385044,
+      "gater": null
+    },
+    {
+      "from": 20,
+      "to": 33,
+      "weight": 0.1270237654397756,
+      "gater": null
+    },
+    {
+      "from": 20,
+      "to": 34,
+      "weight": -0.004817841675367425,
+      "gater": null
+    },
+    {
+      "from": 20,
+      "to": 35,
+      "weight": 0.11861174280092712,
+      "gater": null
+    },
+    {
+      "from": 20,
+      "to": 36,
+      "weight": -0.04838864815769035,
+      "gater": null
+    },
+    {
+      "from": 20,
+      "to": 37,
+      "weight": 0.010880327065857535,
+      "gater": null
+    },
+    {
+      "from": 20,
+      "to": 38,
+      "weight": -0.11511434431850681,
+      "gater": null
+    },
+    {
+      "from": 20,
+      "to": 39,
+      "weight": -0.15577580704225638,
+      "gater": null
+    },
+    {
+      "from": 21,
+      "to": 32,
+      "weight": 0.14352863436015195,
+      "gater": null
+    },
+    {
+      "from": 21,
+      "to": 33,
+      "weight": 0.05600940178250627,
+      "gater": null
+    },
+    {
+      "from": 21,
+      "to": 34,
+      "weight": 0.1535673488656515,
+      "gater": null
+    },
+    {
+      "from": 21,
+      "to": 35,
+      "weight": 0.19545759261525072,
+      "gater": null
+    },
+    {
+      "from": 21,
+      "to": 36,
+      "weight": 0.2883337893953088,
+      "gater": null
+    },
+    {
+      "from": 21,
+      "to": 37,
+      "weight": -0.12690090153831907,
+      "gater": null
+    },
+    {
+      "from": 21,
+      "to": 38,
+      "weight": 0.4047032310647413,
+      "gater": null
+    },
+    {
+      "from": 21,
+      "to": 39,
+      "weight": 0.1845626434035018,
+      "gater": null
+    },
+    {
+      "from": 22,
+      "to": 32,
+      "weight": 0.2794057755901914,
+      "gater": null
+    },
+    {
+      "from": 22,
+      "to": 33,
+      "weight": 0.18221161372652495,
+      "gater": null
+    },
+    {
+      "from": 22,
+      "to": 34,
+      "weight": 0.6999969130056956,
+      "gater": null
+    },
+    {
+      "from": 22,
+      "to": 35,
+      "weight": 0.13790180066557353,
+      "gater": null
+    },
+    {
+      "from": 22,
+      "to": 36,
+      "weight": 0.6327738686984314,
+      "gater": null
+    },
+    {
+      "from": 22,
+      "to": 37,
+      "weight": -0.5886430556417499,
+      "gater": null
+    },
+    {
+      "from": 22,
+      "to": 38,
+      "weight": 0.7550713783374563,
+      "gater": null
+    },
+    {
+      "from": 22,
+      "to": 39,
+      "weight": 0.6032273681680578,
+      "gater": null
+    },
+    {
+      "from": 23,
+      "to": 32,
+      "weight": -0.10879851317522705,
+      "gater": null
+    },
+    {
+      "from": 23,
+      "to": 33,
+      "weight": -0.12061006098120068,
+      "gater": null
+    },
+    {
+      "from": 23,
+      "to": 34,
+      "weight": -1.0403606435313377,
+      "gater": null
+    },
+    {
+      "from": 23,
+      "to": 35,
+      "weight": 0.1459949197551076,
+      "gater": null
+    },
+    {
+      "from": 23,
+      "to": 36,
+      "weight": -1.2145443029580358,
+      "gater": null
+    },
+    {
+      "from": 23,
+      "to": 37,
+      "weight": 1.0920852771645366,
+      "gater": null
+    },
+    {
+      "from": 23,
+      "to": 38,
+      "weight": -1.312916692327968,
+      "gater": null
+    },
+    {
+      "from": 23,
+      "to": 39,
+      "weight": -1.3121877975057779,
+      "gater": null
+    },
+    {
+      "from": 24,
+      "to": 32,
+      "weight": 0.11490006954347926,
+      "gater": null
+    },
+    {
+      "from": 24,
+      "to": 33,
+      "weight": 0.17947883568077172,
+      "gater": null
+    },
+    {
+      "from": 24,
+      "to": 34,
+      "weight": 0.46688320637091885,
+      "gater": null
+    },
+    {
+      "from": 24,
+      "to": 35,
+      "weight": 0.13370560875729068,
+      "gater": null
+    },
+    {
+      "from": 24,
+      "to": 36,
+      "weight": 0.4385921177425432,
+      "gater": null
+    },
+    {
+      "from": 24,
+      "to": 37,
+      "weight": -0.4454480184902879,
+      "gater": null
+    },
+    {
+      "from": 24,
+      "to": 38,
+      "weight": 0.55833173021436,
+      "gater": null
+    },
+    {
+      "from": 24,
+      "to": 39,
+      "weight": 0.6225978791987208,
+      "gater": null
+    },
+    {
+      "from": 25,
+      "to": 32,
+      "weight": -0.06071770064521785,
+      "gater": null
+    },
+    {
+      "from": 25,
+      "to": 33,
+      "weight": 0.007586176739649532,
+      "gater": null
+    },
+    {
+      "from": 25,
+      "to": 34,
+      "weight": -1.0202760331569036,
+      "gater": null
+    },
+    {
+      "from": 25,
+      "to": 35,
+      "weight": 0.12913088349398025,
+      "gater": null
+    },
+    {
+      "from": 25,
+      "to": 36,
+      "weight": -1.0715028270385931,
+      "gater": null
+    },
+    {
+      "from": 25,
+      "to": 37,
+      "weight": 0.9672568922554046,
+      "gater": null
+    },
+    {
+      "from": 25,
+      "to": 38,
+      "weight": -1.1736691431187074,
+      "gater": null
+    },
+    {
+      "from": 25,
+      "to": 39,
+      "weight": -1.0877857112676677,
+      "gater": null
+    },
+    {
+      "from": 26,
+      "to": 32,
+      "weight": 0.1288611012378106,
+      "gater": null
+    },
+    {
+      "from": 26,
+      "to": 33,
+      "weight": 0.15142229489306766,
+      "gater": null
+    },
+    {
+      "from": 26,
+      "to": 34,
+      "weight": -0.1913744980484519,
+      "gater": null
+    },
+    {
+      "from": 26,
+      "to": 35,
+      "weight": 0.20543986210248685,
+      "gater": null
+    },
+    {
+      "from": 26,
+      "to": 36,
+      "weight": -0.2267638110630691,
+      "gater": null
+    },
+    {
+      "from": 26,
+      "to": 37,
+      "weight": 0.14603283841044126,
+      "gater": null
+    },
+    {
+      "from": 26,
+      "to": 38,
+      "weight": -0.22723524047494076,
+      "gater": null
+    },
+    {
+      "from": 26,
+      "to": 39,
+      "weight": -0.12895416170877225,
+      "gater": null
+    },
+    {
+      "from": 27,
+      "to": 32,
+      "weight": 0.1841261159478871,
+      "gater": null
+    },
+    {
+      "from": 27,
+      "to": 33,
+      "weight": 0.3032300245832732,
+      "gater": null
+    },
+    {
+      "from": 27,
+      "to": 34,
+      "weight": 0.8249245523287225,
+      "gater": null
+    },
+    {
+      "from": 27,
+      "to": 35,
+      "weight": 0.01796549410372612,
+      "gater": null
+    },
+    {
+      "from": 27,
+      "to": 36,
+      "weight": 0.7910216836979375,
+      "gater": null
+    },
+    {
+      "from": 27,
+      "to": 37,
+      "weight": -0.635632308592082,
+      "gater": null
+    },
+    {
+      "from": 27,
+      "to": 38,
+      "weight": 0.9823837748163677,
+      "gater": null
+    },
+    {
+      "from": 27,
+      "to": 39,
+      "weight": 0.9137913366984151,
+      "gater": null
+    },
+    {
+      "from": 28,
+      "to": 32,
+      "weight": 0.12026937501287711,
+      "gater": null
+    },
+    {
+      "from": 28,
+      "to": 33,
+      "weight": 0.0417075579177387,
+      "gater": null
+    },
+    {
+      "from": 28,
+      "to": 34,
+      "weight": -0.5496849904110069,
+      "gater": null
+    },
+    {
+      "from": 28,
+      "to": 35,
+      "weight": 0.2682771477163805,
+      "gater": null
+    },
+    {
+      "from": 28,
+      "to": 36,
+      "weight": -0.369678004337153,
+      "gater": null
+    },
+    {
+      "from": 28,
+      "to": 37,
+      "weight": 0.43776772958349475,
+      "gater": null
+    },
+    {
+      "from": 28,
+      "to": 38,
+      "weight": -0.566651869792064,
+      "gater": null
+    },
+    {
+      "from": 28,
+      "to": 39,
+      "weight": -0.5841595292559544,
+      "gater": null
+    },
+    {
+      "from": 29,
+      "to": 32,
+      "weight": 0.03407515554048144,
+      "gater": null
+    },
+    {
+      "from": 29,
+      "to": 33,
+      "weight": 0.0673861215947505,
+      "gater": null
+    },
+    {
+      "from": 29,
+      "to": 34,
+      "weight": 0.07855122948229623,
+      "gater": null
+    },
+    {
+      "from": 29,
+      "to": 35,
+      "weight": 0.2002460604568206,
+      "gater": null
+    },
+    {
+      "from": 29,
+      "to": 36,
+      "weight": 0.17333417251670785,
+      "gater": null
+    },
+    {
+      "from": 29,
+      "to": 37,
+      "weight": -0.13070904362437272,
+      "gater": null
+    },
+    {
+      "from": 29,
+      "to": 38,
+      "weight": 0.18288606191341542,
+      "gater": null
+    },
+    {
+      "from": 29,
+      "to": 39,
+      "weight": 0.23977481570326015,
+      "gater": null
+    },
+    {
+      "from": 30,
+      "to": 32,
+      "weight": 0.1676676779398254,
+      "gater": null
+    },
+    {
+      "from": 30,
+      "to": 33,
+      "weight": 0.06494057927455094,
+      "gater": null
+    },
+    {
+      "from": 30,
+      "to": 34,
+      "weight": -0.2576151113509575,
+      "gater": null
+    },
+    {
+      "from": 30,
+      "to": 35,
+      "weight": 0.20782879517921748,
+      "gater": null
+    },
+    {
+      "from": 30,
+      "to": 36,
+      "weight": -0.07042432444540965,
+      "gater": null
+    },
+    {
+      "from": 30,
+      "to": 37,
+      "weight": 0.19637420236027928,
+      "gater": null
+    },
+    {
+      "from": 30,
+      "to": 38,
+      "weight": -0.2616389295779883,
+      "gater": null
+    },
+    {
+      "from": 30,
+      "to": 39,
+      "weight": -0.17219578128135005,
+      "gater": null
+    },
+    {
+      "from": 31,
+      "to": 32,
+      "weight": 0.054710287433583187,
+      "gater": null
+    },
+    {
+      "from": 31,
+      "to": 33,
+      "weight": 0.10093706055926202,
+      "gater": null
+    },
+    {
+      "from": 31,
+      "to": 34,
+      "weight": 0.20429658977801307,
+      "gater": null
+    },
+    {
+      "from": 31,
+      "to": 35,
+      "weight": 0.15989607272178263,
+      "gater": null
+    },
+    {
+      "from": 31,
+      "to": 36,
+      "weight": 0.21143138777738305,
+      "gater": null
+    },
+    {
+      "from": 31,
+      "to": 37,
+      "weight": -0.17076644622879195,
+      "gater": null
+    },
+    {
+      "from": 31,
+      "to": 38,
+      "weight": 0.39366924492331934,
+      "gater": null
+    },
+    {
+      "from": 31,
+      "to": 39,
+      "weight": 0.3332257347044423,
+      "gater": null
+    },
+    {
+      "from": 32,
+      "to": 40,
+      "weight": -0.2927498109857362,
+      "gater": null
+    },
+    {
+      "from": 33,
+      "to": 40,
+      "weight": -0.25018139470870115,
+      "gater": null
+    },
+    {
+      "from": 34,
+      "to": 40,
+      "weight": 1.7410953082208658,
+      "gater": null
+    },
+    {
+      "from": 35,
+      "to": 40,
+      "weight": -0.745571732551092,
+      "gater": null
+    },
+    {
+      "from": 36,
+      "to": 40,
+      "weight": 1.8277951025551602,
+      "gater": null
+    },
+    {
+      "from": 37,
+      "to": 40,
+      "weight": -2.472559845082104,
+      "gater": null
+    },
+    {
+      "from": 38,
+      "to": 40,
+      "weight": 2.2381672428436445,
+      "gater": null
+    },
+    {
+      "from": 39,
+      "to": 40,
+      "weight": 2.0675789581854604,
+      "gater": null
+    }
+  ]
+}
