@@ -4,22 +4,22 @@
 // ================================================================
 
 const mongoose = require("mongoose");
+const { generateForensicId } = require("../../utils/forensicId");
 
 const alertSchema = new mongoose.Schema({
-
   alertId: {
     type: String,
-    default: () => `ALT-${Date.now()}-${Math.random().toString(36).slice(2, 7).toUpperCase()}`,
+    default: () => generateForensicId("ALT"),
     unique: true,
     index: true,
   },
 
   // ── Classification ──
-  title:       { type: String, required: true },
+  title: { type: String, required: true },
   description: { type: String, default: "" },
-  category:    { type: String, required: true, index: true },
-  ruleId:      { type: String, required: true },
-  ruleName:    { type: String, required: true },
+  category: { type: String, required: true, index: true },
+  ruleId: { type: String, required: true },
+  ruleName: { type: String, required: true },
 
   // ── Severity ──
   severity: {
@@ -35,24 +35,24 @@ const alertSchema = new mongoose.Schema({
   },
 
   // ── Triggering events ──
-  eventIds:   { type: [String], default: [] },
+  eventIds: { type: [String], default: [] },
   eventCount: { type: Number, default: 1 },
 
   // ── Context ──
   target: {
-    url:    { type: String, default: null },
+    url: { type: String, default: null },
     domain: { type: String, default: null },
-    ip:     { type: String, default: null },
-    email:  { type: String, default: null },
+    ip: { type: String, default: null },
+    email: { type: String, default: null },
   },
   source: {
-    ip:    { type: String, default: null },
+    ip: { type: String, default: null },
     agent: { type: String, default: null },
   },
 
   // ── MITRE ──
   mitre: {
-    tactic:    { type: String, default: null },
+    tactic: { type: String, default: null },
     technique: { type: String, default: null },
   },
 
@@ -61,7 +61,7 @@ const alertSchema = new mongoose.Schema({
 
   // ── Correlation chain ──
   correlationId: { type: String, default: null, index: true },
-  isCorrelated:  { type: Boolean, default: false }, // Part of an attack chain
+  isCorrelated: { type: Boolean, default: false }, // Part of an attack chain
 
   // ── Status & Workflow ──
   status: {
@@ -70,24 +70,61 @@ const alertSchema = new mongoose.Schema({
     default: "open",
     index: true,
   },
+  escalated: { type: Boolean, default: false },
 
   // ── Timestamps ──
   firstSeen: { type: Date, default: Date.now },
-  lastSeen:  { type: Date, default: Date.now },
-  resolvedAt:{ type: Date, default: null },
+  lastSeen: { type: Date, default: Date.now },
+  resolvedAt: { type: Date, default: null },
 
   // ── Analyst notes ──
-  notes:    { type: String, default: "" },
+  notes: { type: String, default: "" },
+  comments: {
+    type: [{ author: String, text: String, timestamp: Date }],
+    default: [],
+  },
+  slaDeadline: { type: Date, default: null }, // set when alert created based on severity
   assignee: { type: String, default: null },
 
   // ── Dedup key (prevents duplicate alerts for same event) ──
   dedupKey: { type: String, index: true },
 
   tags: { type: [String], default: [] },
+
+  // ── Chain of Custody ─────────────────────────────────────────
+  issuedAt: { type: Date, default: Date.now },
+  issuedBy: { type: String, default: "system" },
+
+  chainOfCustody: [
+    {
+      action: { type: String, required: true }, // "created"|"assigned"|"status_changed"|"commented"|"escalated"|"resolved"
+      by: { type: String, required: true },
+      at: { type: Date, default: Date.now },
+      detail: { type: String, default: "" },
+      fromStatus: { type: String, default: null },
+      toStatus: { type: String, default: null },
+    },
+  ],
+
+  // ── Cross-reference IDs ───────────────────────────────────────
+  linkedLogIds: { type: [String], default: [] }, // LOG- IDs that triggered this alert
+  linkedIncidentId: { type: String, default: null }, // INC- ID if promoted
+  linkedCaseId: { type: String, default: null }, // CASE- ID if case management
+  reportRef: { type: String, default: null }, // Reference number for legal/law enforcement
 });
 
 alertSchema.index({ firstSeen: -1, severity: -1 });
 alertSchema.index({ status: 1, severity: -1 });
 alertSchema.index({ dedupKey: 1 }, { unique: true, sparse: true });
+
+// Auto-set SLA deadline on creation
+alertSchema.pre("save", function (next) {
+  if (this.isNew && !this.slaDeadline) {
+    const slaHours = { 5: 1, 4: 4, 3: 24, 2: 72, 1: 168 };
+    const hours = slaHours[this.severity] || 24;
+    this.slaDeadline = new Date(Date.now() + hours * 60 * 60 * 1000);
+  }
+  next();
+});
 
 module.exports = mongoose.model("SiemAlert", alertSchema);

@@ -1,0 +1,61 @@
+# ================================================================
+# FILE: .gitignore — ADD TO PROJECT ROOT (TDPCL/)
+# Prevents credentials, large files, and build artifacts
+# from being committed or uploaded
+# ================================================================
+
+# ── CRITICAL: Environment files with secrets ──
+.env
+.env.local
+.env.*.local
+*.env
+
+# ── Node modules (reinstall with npm install) ──
+node_modules/
+Backend/node_modules/
+Frontend/node_modules/
+
+# ── Build outputs ──
+Frontend/dist/
+Frontend/.tsbuildinfo
+Frontend/tsconfig.app.tsbuildinfo
+Frontend/tsconfig.node.tsbuildinfo
+
+# ── Trained ML models (large binary files) ──
+# These are auto-regenerated from datasets
+Backend/ai/phishing_model_v2.json
+Backend/ai/phishing_model_v3.json
+# Keep phishing_model.json (baseline model, small, needed for cold start)
+
+# ── Dataset CSV files (can be large, re-downloadable) ──
+# Comment these out if you want to track small datasets
+Backend/datasets/*.csv
+
+# ── Training logs ──
+Backend/ai/training_log.json
+
+# ── IDE and OS ──
+.vscode/settings.json
+.idea/
+*.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ── Logs ──
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# ── Test outputs ──
+coverage/
+*.test.js.snap
+
+# ── Package locks (optional — remove to track them) ──
+# package-lock.json
+
+# ── Temporary files ──
+*.tmp
+*.temp
+audit-screenshots/
+audit-report.json

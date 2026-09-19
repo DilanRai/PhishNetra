@@ -1,0 +1,12 @@
+﻿{
+  "EventID": 4625,
+  "Computer": "TEST-WINDOWS",
+  "TimeCreated": "2026-08-19T23:45:00.000Z",
+  "EventData": {
+    "TargetUserName": "testuser",
+    "SubjectUserName": "SYSTEM",
+    "IpAddress": "127.0.0.1",
+    "WorkstationName": "TEST-WINDOWS",
+    "LogonType": "2"
+  }
+}

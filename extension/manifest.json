@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "PhishGuard AI",
+  "name": "PhishNetra AI",
   "version": "2.0",
   "description": "Real-time AI phishing detection for every website you visit",
   "permissions": [
@@ -12,7 +12,11 @@
     "contextMenus"
   ],
   "host_permissions": [
-    "<all_urls>"
+    "<all_urls>",
+    "https://mail.google.com/*",
+    "https://outlook.live.com/*",
+    "https://outlook.office.com/*",
+    "https://outlook.office365.com/*"
   ],
   "background": {
     "service_worker": "background.js"
@@ -20,12 +24,14 @@
   "content_scripts": [
     {
       "matches": [
-        "<all_urls>"
+        "<all_urls>",
+        "https://mail.google.com/*",
+        "https://outlook.live.com/*",
+        "https://outlook.office.com/*",
+        "https://outlook.office365.com/*"
       ],
-      "js": [
-        "content.js"
-      ],
-      "run_at": "document_end"
+      "js": ["content.js"],
+      "run_at": "document_idle"
     }
   ],
   "action": {

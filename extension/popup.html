@@ -1,146 +1,473 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>PhishGuard AI</title>
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhishNetra AI</title>
+    <style>
+      :root {
+        --bg-base: #080b10;
+        --card: #111620;
+        --border: #1e2736;
+        --muted: #8b95a8;
+        --text: #e8edf5;
+      }
 
-    body {
-      width: 360px;
-      background: #080b10;
-      color: #e8edf5;
-      font-family: system-ui, sans-serif;
-    }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    .header {
-      padding: 12px 16px;
-      border-bottom: 1px solid #1e2736;
-      background: rgba(0,255,136,0.03);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo { display:flex; align-items:center; gap:8px; }
-    .logo-icon {
-      width:32px; height:32px;
-      background: rgba(0,255,136,0.08);
-      border: 1px solid rgba(0,255,136,0.2);
-      border-radius:8px;
-      display:flex; align-items:center; justify-content:center;
-      font-size:16px;
-    }
-    .logo-title { font-size:14px; font-weight:800; color:#e8edf5; letter-spacing:-0.02em; }
-    .logo-sub   { font-size:9px; color:#00ff88; font-family:monospace; letter-spacing:0.12em; }
+      body {
+        width: 360px;
+        background: #080b10;
+        color: #e8edf5;
+        font-family: system-ui, sans-serif;
+      }
 
-    .status-dot { display:flex; align-items:center; gap:5px; font-size:10px; color:#8b95a8; font-family:monospace; }
-    .dot { width:6px; height:6px; border-radius:50%; background:#00ff88; }
-    .dot.offline { background:#ff4444; }
+      /* ── Header ── */
+      .header {
+        padding: 12px 16px;
+        border-bottom: 1px solid #1e2736;
+        background: rgba(0, 255, 136, 0.03);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .logo-icon {
+        width: 32px;
+        height: 32px;
+        background: rgba(0, 255, 136, 0.08);
+        border: 1px solid rgba(0, 255, 136, 0.2);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+      }
+      .logo-title {
+        font-size: 14px;
+        font-weight: 800;
+        color: #e8edf5;
+        letter-spacing: -0.02em;
+      }
+      .logo-sub {
+        font-size: 9px;
+        color: #00ff88;
+        font-family: monospace;
+        letter-spacing: 0.12em;
+      }
+      .status-dot {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 10px;
+        color: #8b95a8;
+        font-family: monospace;
+      }
+      .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #00ff88;
+        flex-shrink: 0;
+      }
+      .dot.offline {
+        background: #ff4444;
+      }
 
-    .result-card {
-      margin:12px;
-      border-radius:10px;
-      overflow:hidden;
-      border:1px solid #1e2736;
-    }
-    .result-header {
-      padding:12px 14px;
-      display:flex; align-items:center; gap:10px;
-    }
-    .result-icon  { font-size:22px; flex-shrink:0; }
-    .result-info  { flex:1; min-width:0; }
-    .result-label { font-size:16px; font-weight:800; letter-spacing:0.04em; }
-    .result-url   { font-size:10px; color:#8b95a8; font-family:monospace; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-top:2px; }
-    .result-score { font-family:monospace; font-size:22px; font-weight:600; flex-shrink:0; }
-    .score-label  { font-size:8px; color:#8b95a8; font-family:monospace; text-align:right; }
+      /* ── Result card ── */
+      .result-card {
+        margin: 12px;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid #1e2736;
+      }
+      .result-header {
+        padding: 12px 14px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .result-icon {
+        font-size: 22px;
+        flex-shrink: 0;
+      }
+      .result-info {
+        flex: 1;
+        min-width: 0;
+      }
+      .result-label {
+        font-size: 16px;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+      }
+      .result-url {
+        font-size: 10px;
+        color: #8b95a8;
+        font-family: monospace;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-top: 2px;
+      }
+      .result-score {
+        font-family: monospace;
+        font-size: 22px;
+        font-weight: 600;
+        flex-shrink: 0;
+      }
+      .score-label {
+        font-size: 8px;
+        color: #8b95a8;
+        font-family: monospace;
+        text-align: right;
+      }
 
-    .status-safe       { background:rgba(0,255,136,0.06); border-color:rgba(0,255,136,0.2); }
-    .status-safe       .result-label, .status-safe .result-score { color:#00ff88; }
-    .status-suspicious { background:rgba(245,166,35,0.06); border-color:rgba(245,166,35,0.2); }
-    .status-suspicious .result-label, .status-suspicious .result-score { color:#f5a623; }
-    .status-phishing   { background:rgba(255,68,68,0.06); border-color:rgba(255,68,68,0.2); }
-    .status-phishing   .result-label, .status-phishing .result-score { color:#ff4444; }
-    .status-scanning   { background:rgba(99,102,241,0.06); border-color:rgba(99,102,241,0.2); }
-    .status-scanning   .result-label { color:#818cf8; }
+      .status-safe {
+        background: rgba(0, 255, 136, 0.06);
+        border-color: rgba(0, 255, 136, 0.2);
+      }
+      .status-safe .result-label,
+      .status-safe .result-score {
+        color: #00ff88;
+      }
 
-    .score-bar-wrap { padding:0 14px 12px; }
-    .score-bar-bg   { height:4px; background:#1e2736; border-radius:2px; overflow:hidden; }
-    .score-bar-fill { height:100%; border-radius:2px; transition:width 0.8s; }
+      .status-suspicious {
+        background: rgba(245, 166, 35, 0.06);
+        border-color: rgba(245, 166, 35, 0.2);
+      }
+      .status-suspicious .result-label,
+      .status-suspicious .result-score {
+        color: #f5a623;
+      }
 
-    .issues       { padding:0 12px 12px; }
-    .issues-title { font-size:9px; color:#4a5568; font-family:monospace; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:6px; }
-    .issue-item   { display:flex; align-items:flex-start; gap:6px; padding:5px 8px; background:#111620; border:1px solid #1e2736; border-radius:6px; margin-bottom:4px; font-size:10px; color:#8b95a8; font-family:monospace; line-height:1.4; }
-    .issue-dot    { width:4px; height:4px; border-radius:50%; background:#f5a623; flex-shrink:0; margin-top:4px; }
+      .status-phishing {
+        background: rgba(255, 68, 68, 0.06);
+        border-color: rgba(255, 68, 68, 0.2);
+      }
+      .status-phishing .result-label,
+      .status-phishing .result-score {
+        color: #ff4444;
+      }
 
-    .ml-row   { padding:0 12px 10px; }
-    .ml-badge { display:inline-flex; align-items:center; gap:4px; background:rgba(0,212,255,0.06); border:1px solid rgba(0,212,255,0.15); border-radius:20px; padding:3px 8px; font-size:9px; color:#00d4ff; font-family:monospace; }
-    .ml-dot   { width:4px; height:4px; border-radius:50%; background:#00d4ff; }
+      .status-scanning {
+        background: rgba(99, 102, 241, 0.06);
+        border-color: rgba(99, 102, 241, 0.2);
+      }
+      .status-scanning .result-label {
+        color: #818cf8;
+      }
 
-    .scan-section { padding:0 12px 12px; }
-    .section-label { padding:0 12px 6px; font-size:9px; color:#4a5568; font-family:monospace; letter-spacing:0.12em; text-transform:uppercase; }
-    .scan-input-wrap { display:flex; gap:6px; }
-    .scan-input {
-      flex:1; background:#111620; border:1px solid #1e2736; border-radius:8px;
-      padding:8px 10px; color:#e8edf5; font-size:11px; font-family:monospace; outline:none;
-    }
-    .scan-input:focus    { border-color:rgba(0,255,136,0.4); }
-    .scan-input::placeholder { color:#4a5568; }
-    .scan-btn {
-      background:#00ff88; color:#080b10; border:none; border-radius:8px;
-      padding:8px 14px; font-size:11px; font-weight:700; cursor:pointer;
-      white-space:nowrap; transition:all 0.2s;
-    }
-    .scan-btn:hover    { background:#00e87a; }
-    .scan-btn:disabled { background:#1e2736; color:#4a5568; cursor:not-allowed; }
+      /* ── Score bar ── */
+      .score-bar-wrap {
+        padding: 0 14px 12px;
+      }
+      .score-bar-bg {
+        height: 4px;
+        background: #1e2736;
+        border-radius: 2px;
+        overflow: hidden;
+      }
+      .score-bar-fill {
+        height: 100%;
+        border-radius: 2px;
+        transition: width 0.8s ease;
+      }
 
-    .divider { height:1px; background:#1e2736; margin:0 12px 10px; }
+      /* ── Issues ── */
+      .issues {
+        padding: 0 12px 10px;
+      }
+      .issues-title {
+        font-size: 9px;
+        color: #4a5568;
+        font-family: monospace;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+      }
+      .issue-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 6px;
+        padding: 5px 8px;
+        background: #111620;
+        border: 1px solid #1e2736;
+        border-radius: 6px;
+        margin-bottom: 4px;
+        font-size: 10px;
+        color: #8b95a8;
+        font-family: monospace;
+        line-height: 1.4;
+      }
+      .issue-dot {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #f5a623;
+        flex-shrink: 0;
+        margin-top: 4px;
+      }
 
-    .loading-wrap { padding:20px; text-align:center; }
-    .spinner      { width:28px; height:28px; border:2px solid #1e2736; border-top-color:#00ff88; border-radius:50%; animation:spin 0.8s linear infinite; margin:0 auto 8px; }
-    @keyframes spin { to { transform:rotate(360deg); } }
-    .loading-text { font-size:11px; color:#8b95a8; font-family:monospace; }
-    .loading-url  { font-size:9px; color:#4a5568; font-family:monospace; margin-top:4px; word-break:break-all; }
+      /* ── Tag rows (DNA / Kit / Evasion) ── */
+      .tag-row {
+        padding: 0 12px 6px;
+      }
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        padding: 3px 8px;
+        border-radius: 20px;
+        font-size: 9px;
+        font-family: monospace;
+        border: 1px solid rgba(163, 120, 251, 0.2);
+        background: rgba(163, 120, 251, 0.06);
+        color: #a78bfa;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 310px;
+      }
+      .tag-purple {
+        color: #a78bfa;
+        border-color: rgba(163, 120, 251, 0.2);
+        background: rgba(163, 120, 251, 0.06);
+      }
 
-    .footer { padding:8px 12px; border-top:1px solid #1e2736; display:flex; justify-content:space-between; align-items:center; }
-    .footer-btn { font-size:9px; color:#4a5568; font-family:monospace; background:none; border:none; cursor:pointer; }
-    .footer-btn:hover { color:#00ff88; }
+      /* ── Community confirmed banner ── */
+      .community-banner {
+        padding: 6px 14px;
+        background: rgba(255, 68, 68, 0.07);
+        border-bottom: 1px solid rgba(255, 68, 68, 0.2);
+        font-size: 9px;
+        font-family: monospace;
+        color: #ff4444;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
 
-    .error-box { margin:12px; padding:12px 14px; background:rgba(255,68,68,0.06); border:1px solid rgba(255,68,68,0.2); border-radius:10px; font-size:11px; color:#ff4444; font-family:monospace; }
-  </style>
-</head>
-<body>
+      /* ── ML row ── */
+      .ml-row {
+        padding: 0 12px 10px;
+      }
+      .ml-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        background: rgba(0, 212, 255, 0.06);
+        border: 1px solid rgba(0, 212, 255, 0.15);
+        border-radius: 20px;
+        padding: 3px 8px;
+        font-size: 9px;
+        color: #00d4ff;
+        font-family: monospace;
+      }
+      .ml-dot {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #00d4ff;
+      }
 
-  <div class="header">
-    <div class="logo">
-      <div class="logo-icon">🛡️</div>
-      <div>
-        <div class="logo-title">PhishGuard AI</div>
-        <div class="logo-sub">v2.0 · ACTIVE</div>
+      /* ── Manual scan ── */
+      .scan-section {
+        padding: 0 12px 12px;
+      }
+      .section-label {
+        padding: 0 12px 6px;
+        font-size: 9px;
+        color: #4a5568;
+        font-family: monospace;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .scan-input-wrap {
+        display: flex;
+        gap: 6px;
+      }
+      .scan-input {
+        flex: 1;
+        background: #111620;
+        border: 1px solid #1e2736;
+        border-radius: 8px;
+        padding: 8px 10px;
+        color: #e8edf5;
+        font-size: 11px;
+        font-family: monospace;
+        outline: none;
+      }
+      .scan-input:focus {
+        border-color: rgba(0, 255, 136, 0.4);
+      }
+      .scan-input::placeholder {
+        color: #4a5568;
+      }
+      .scan-btn {
+        background: #00ff88;
+        color: #080b10;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 14px;
+        font-size: 11px;
+        font-weight: 700;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: all 0.2s;
+      }
+      .scan-btn:hover {
+        background: #00e87a;
+      }
+      .scan-btn:disabled {
+        background: #1e2736;
+        color: #4a5568;
+        cursor: not-allowed;
+      }
+
+      /* ── Misc ── */
+      .divider {
+        height: 1px;
+        background: #1e2736;
+        margin: 0 12px 10px;
+      }
+
+      .loading-wrap {
+        padding: 20px;
+        text-align: center;
+      }
+      .spinner {
+        width: 28px;
+        height: 28px;
+        border: 2px solid #1e2736;
+        border-top-color: #00ff88;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+        margin: 0 auto 8px;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .loading-text {
+        font-size: 11px;
+        color: #8b95a8;
+        font-family: monospace;
+      }
+      .loading-url {
+        font-size: 9px;
+        color: #4a5568;
+        font-family: monospace;
+        margin-top: 4px;
+        word-break: break-all;
+      }
+
+      .footer {
+        padding: 8px 12px;
+        border-top: 1px solid #1e2736;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .footer-btn {
+        font-size: 9px;
+        color: #4a5568;
+        font-family: monospace;
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: color 0.15s;
+      }
+      .footer-btn:hover {
+        color: #00ff88;
+      }
+
+      .error-box {
+        margin: 12px;
+        padding: 12px 14px;
+        background: rgba(255, 68, 68, 0.06);
+        border: 1px solid rgba(255, 68, 68, 0.2);
+        border-radius: 10px;
+        font-size: 11px;
+        color: #ff4444;
+        font-family: monospace;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">
+        <div class="logo-icon">🛡️</div>
+        <div>
+          <div class="logo-title">PhishNetra AI</div>
+          <div class="logo-sub">v2.1 · ACTIVE</div>
+        </div>
+      </div>
+      <div class="status-dot">
+        <div class="dot" id="apiDot"></div>
+        <span id="apiStatus">ONLINE</span>
+        <button
+          id="logout-btn"
+          title="Sign out"
+          style="
+            margin-left: 8px;
+            background: none;
+            border: none;
+            color: #475569;
+            cursor: pointer;
+            font-size: 11px;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-family: monospace;
+          "
+          onmouseover="this.style.color = '#f87171'"
+          onmouseout="this.style.color = '#475569'"
+        >
+          Sign out
+        </button>
       </div>
     </div>
-    <div class="status-dot">
-      <div class="dot" id="apiDot"></div>
-      <span id="apiStatus">ONLINE</span>
+
+    <!-- Scan result -->
+    <div id="resultArea"></div>
+
+    <!-- Manual scan -->
+    <div class="divider"></div>
+    <div class="section-label">MANUAL SCAN</div>
+    <div class="scan-section">
+      <div class="scan-input-wrap">
+        <input
+          class="scan-input"
+          id="manualInput"
+          type="text"
+          placeholder="https://... or paste message text..."
+        />
+        <button class="scan-btn" id="manualBtn">Scan</button>
+      </div>
     </div>
-  </div>
 
-  <div id="resultArea"></div>
+    <!-- SIEM status panel -->
+    <div id="siemStatus"></div>
 
-  <div class="divider"></div>
-  <div class="section-label">MANUAL SCAN</div>
-  <div class="scan-section">
-    <div class="scan-input-wrap">
-      <input class="scan-input" id="manualInput" type="text" placeholder="https://example.com or paste text..." />
-      <button class="scan-btn" id="manualBtn">Scan</button>
+    <!-- GAP 11: Inbox threat summary — populated by renderInboxStatus() in popup.js -->
+    <div id="inbox-status" style="padding: 0 12px"></div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <button class="footer-btn" id="openDash">Open Dashboard</button>
+      <span class="footer-btn" id="scanCount">0 scans today</span>
+      <button class="footer-btn" id="refresh">Refresh</button>
     </div>
-  </div>
 
-  <div class="footer">
-    <button class="footer-btn" id="openDash">Open Dashboard</button>
-    <span class="footer-btn" id="scanCount">0 scans today</span>
-    <button class="footer-btn" id="refresh">Refresh</button>
-  </div>
-
-  <script src="popup.js"></script>
-</body>
+    <script src="popup.js"></script>
+  </body>
 </html>

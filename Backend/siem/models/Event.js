@@ -4,35 +4,35 @@
 // ================================================================
 
 const mongoose = require("mongoose");
+const { generateForensicId } = require("../../utils/forensicId");
 
 const eventSchema = new mongoose.Schema({
-
   // ── Core Identity ──
   eventId: {
     type: String,
-    default: () => `EVT-${Date.now()}-${Math.random().toString(36).slice(2, 7).toUpperCase()}`,
+    default: () => generateForensicId("EVT"),
     unique: true,
     index: true,
   },
 
   // ── Timing ──
-  timestamp:  { type: Date, default: Date.now, index: true },
+  timestamp: { type: Date, default: Date.now, index: true },
   receivedAt: { type: Date, default: Date.now },
 
   // ── Event Classification ──
   category: {
     type: String,
     enum: [
-      "phishing",        // Phishing attempt detected
-      "malware",         // Malware indicators
-      "brute_force",     // Login brute force
-      "anomaly",         // Behavioral anomaly
-      "network",         // Network threat
-      "reconnaissance",  // Scanning/probing
-      "data_exfil",      // Data exfiltration attempt
-      "auth",            // Authentication event
-      "policy",          // Policy violation
-      "system",          // System event
+      "phishing", // Phishing attempt detected
+      "malware", // Malware indicators
+      "brute_force", // Login brute force
+      "anomaly", // Behavioral anomaly
+      "network", // Network threat
+      "reconnaissance", // Scanning/probing
+      "data_exfil", // Data exfiltration attempt
+      "auth", // Authentication event
+      "policy", // Policy violation
+      "system", // System event
     ],
     required: true,
     index: true,
@@ -55,43 +55,58 @@ const eventSchema = new mongoose.Schema({
 
   // ── Source ──
   source: {
-    type:    { type: String, enum: ["api", "extension", "scanner", "manual", "agent", "webhook"], default: "api" },
-    ip:      { type: String, default: null },
-    host:    { type: String, default: null },
-    agent:   { type: String, default: null },  // extension, API client, etc.
-    userId:  { type: String, default: null },
+    type: {
+      type: String,
+      enum: [
+        "api",
+        "extension",
+        "scanner",
+        "manual",
+        "agent",
+        "webhook",
+        "honeypot",
+        "ids",
+      ],
+      default: "api",
+    },
+    ip: { type: String, default: null },
+    host: { type: String, default: null },
+    agent: { type: String, default: null }, // extension, API client, etc.
+    userId: { type: String, default: null },
   },
 
   // ── Target ──
   target: {
-    url:     { type: String, default: null },
-    domain:  { type: String, default: null },
-    ip:      { type: String, default: null },
-    email:   { type: String, default: null },
-    file:    { type: String, default: null },
+    url: { type: String, default: null },
+    domain: { type: String, default: null },
+    ip: { type: String, default: null },
+    email: { type: String, default: null },
+    file: { type: String, default: null },
+    rawInput: { type: String, default: null }, // original scan input (URL/email/SMS/text)
+    inputType: { type: String, default: null }, // "url" | "email" | "sms" | "text"
   },
 
   // ── Event Data ──
-  title:       { type: String, required: true },
+  title: { type: String, required: true },
   description: { type: String, default: "" },
-  rawData:     { type: mongoose.Schema.Types.Mixed, default: {} },
+  rawData: { type: mongoose.Schema.Types.Mixed, default: {} },
 
   // ── MITRE ATT&CK Mapping ──
   mitre: {
-    tactic:    { type: String, default: null },  // e.g. "TA0001 - Initial Access"
-    technique: { type: String, default: null },  // e.g. "T1566 - Phishing"
+    tactic: { type: String, default: null }, // e.g. "TA0001 - Initial Access"
+    technique: { type: String, default: null }, // e.g. "T1566 - Phishing"
     subtechnique: { type: String, default: null },
   },
 
   // ── Correlation ──
   correlationId: { type: String, default: null, index: true }, // Groups related events
-  alertId:       { type: String, default: null, index: true }, // Alert that spawned from this
+  alertId: { type: String, default: null, index: true }, // Alert that spawned from this
 
   // ── Risk Score (from our ML engine if applicable) ──
   riskScore: { type: Number, min: 0, max: 100, default: null },
 
   // ── Processing State ──
-  processed:   { type: Boolean, default: false },
+  processed: { type: Boolean, default: false },
   ruleMatches: { type: [String], default: [] }, // rule IDs that matched
 
   // ── Compliance Tags ──

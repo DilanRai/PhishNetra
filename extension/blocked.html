@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blocked by PhishNetra</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #05080f;
+        color: #e8edf5;
+        font-family: system-ui, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        max-width: 480px;
+        width: 100%;
+        padding: 40px 24px;
+        text-align: center;
+      }
+
+      /* Shield icon */
+      .shield {
+        width: 80px;
+        height: 80px;
+        background: rgba(255, 68, 68, 0.08);
+        border: 2px solid rgba(255, 68, 68, 0.3);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 36px;
+        margin: 0 auto 24px;
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(255, 68, 68, 0.2);
+        }
+        50% {
+          box-shadow: 0 0 0 12px rgba(255, 68, 68, 0);
+        }
+      }
+
+      h1 {
+        font-size: 26px;
+        font-weight: 800;
+        color: #ff4444;
+        margin-bottom: 8px;
+        letter-spacing: -0.02em;
+      }
+
+      .subtitle {
+        font-size: 13px;
+        color: #8b95a8;
+        margin-bottom: 24px;
+        line-height: 1.5;
+      }
+
+      /* Blocked URL card */
+      .url-card {
+        background: #0d1117;
+        border: 1px solid rgba(255, 68, 68, 0.25);
+        border-radius: 12px;
+        padding: 14px 18px;
+        margin-bottom: 16px;
+        text-align: left;
+      }
+      .url-label {
+        font-size: 9px;
+        color: #4a5a78;
+        font-family: monospace;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+      }
+      .url-value {
+        font-size: 11px;
+        color: #f97316;
+        font-family: monospace;
+        word-break: break-all;
+        line-height: 1.5;
+      }
+
+      /* Reason card */
+      .reason-card {
+        background: rgba(255, 68, 68, 0.05);
+        border: 1px solid rgba(255, 68, 68, 0.15);
+        border-radius: 12px;
+        padding: 12px 18px;
+        margin-bottom: 24px;
+        text-align: left;
+      }
+      .reason-label {
+        font-size: 9px;
+        color: #ff4444;
+        font-family: monospace;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+      .reason-value {
+        font-size: 12px;
+        color: #e8edf5;
+        line-height: 1.5;
+      }
+
+      /* Action buttons */
+      .actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 24px;
+      }
+
+      .btn {
+        padding: 12px 20px;
+        border-radius: 10px;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+        border: none;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        text-decoration: none;
+      }
+      .btn-primary {
+        background: #00ff88;
+        color: #080b10;
+      }
+      .btn-primary:hover {
+        background: #00e87a;
+      }
+
+      .btn-ghost {
+        background: transparent;
+        color: #8b95a8;
+        border: 1px solid #1e2736;
+      }
+      .btn-ghost:hover {
+        color: #e8edf5;
+        border-color: #4a5a78;
+      }
+
+      .btn-danger {
+        background: transparent;
+        color: #f97316;
+        border: 1px solid rgba(249, 115, 22, 0.3);
+        font-size: 11px;
+        padding: 8px 16px;
+      }
+      .btn-danger:hover {
+        background: rgba(249, 115, 22, 0.08);
+      }
+
+      /* Footer */
+      .footer-text {
+        font-size: 10px;
+        color: #4a5a78;
+        font-family: monospace;
+        line-height: 1.6;
+      }
+      .footer-text span {
+        color: #00ff88;
+      }
+
+      /* Success message */
+      .success-msg {
+        display: none;
+        padding: 10px 16px;
+        background: rgba(0, 255, 136, 0.06);
+        border: 1px solid rgba(0, 255, 136, 0.2);
+        border-radius: 8px;
+        font-size: 12px;
+        color: #00ff88;
+        font-family: monospace;
+        margin-bottom: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Shield icon -->
+      <div class="shield">🛡️</div>
+
+      <!-- Heading -->
+      <h1>Access Blocked</h1>
+      <p class="subtitle">
+        PhishNetra AI has blocked this URL based on your organization's security
+        policy.
+      </p>
+
+      <!-- Blocked URL -->
+      <div class="url-card">
+        <div class="url-label">Blocked URL</div>
+        <div class="url-value" id="blockedUrl">Loading...</div>
+      </div>
+
+      <!-- Reason -->
+      <div class="reason-card">
+        <div class="reason-label">Block Reason</div>
+        <div class="reason-value" id="blockReason">
+          This domain matches a high-risk TLD blocked by your enterprise
+          security policy.
+        </div>
+      </div>
+
+      <!-- Success message (shown after false positive report) -->
+      <div class="success-msg" id="successMsg">
+        ✓ Report submitted — our team will review this URL within 24 hours.
+      </div>
+
+      <!-- Action buttons -->
+      <div class="actions">
+        <button class="btn btn-primary" id="goBackBtn">
+          ← Go Back to Safety
+        </button>
+        <button class="btn btn-ghost" id="openDashBtn">
+          Open PhishNetra Dashboard
+        </button>
+        <button class="btn btn-danger" id="reportFpBtn">
+          ⚠ Report as False Positive
+        </button>
+      </div>
+
+      <!-- Footer -->
+      <p class="footer-text">
+        Protected by <span>PhishNetra AI v2.1</span> · SentinelCore SIEM ·
+        Enterprise Security Policy
+      </p>
+    </div>
+
+    <script>
+      // Parse URL params
+      var params = new URLSearchParams(window.location.search);
+      var blockedUrl = params.get("url") || "Unknown URL";
+      var tld = params.get("tld") || null;
+
+      // Display blocked URL
+      document.getElementById("blockedUrl").textContent = blockedUrl;
+
+      // Display reason
+      if (tld) {
+        document.getElementById("blockReason").textContent =
+          'The domain ends with "' +
+          tld +
+          '" which is flagged as high-risk ' +
+          "in your organization's enterprise security policy.";
+      }
+
+      // Go back
+      document
+        .getElementById("goBackBtn")
+        .addEventListener("click", function () {
+          if (history.length > 1) {
+            history.back();
+          } else {
+            window.close();
+          }
+        });
+
+      // Open dashboard
+      document
+        .getElementById("openDashBtn")
+        .addEventListener("click", function () {
+          window.open("http://localhost:5173/admin", "_blank");
+        });
+
+      // Report false positive
+      document
+        .getElementById("reportFpBtn")
+        .addEventListener("click", async function () {
+          var btn = document.getElementById("reportFpBtn");
+          btn.disabled = true;
+          btn.textContent = "Reporting...";
+
+          try {
+            await fetch("http://localhost:5000/api/scan", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                input: blockedUrl,
+                note: "False positive report from extension blocked page",
+                tags: ["false-positive", "policy-block"],
+              }),
+            });
+            document.getElementById("successMsg").style.display = "block";
+            btn.textContent = "✓ Reported";
+          } catch {
+            btn.disabled = false;
+            btn.textContent = "⚠ Report as False Positive";
+          }
+        });
+    </script>
+  </body>
+</html>
